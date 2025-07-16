@@ -1,0 +1,56 @@
+
+
+{
+    "testes": [
+        {
+            "titleTest": "Teste Alteração SLID via magic app",
+            "testDescription": "",
+            "body":[
+                {
+                    "id": "1",
+                    "radio": "Wi-Fi 5",
+                    "model": "RTF8117VW",
+                    "firmware": "BR_SV_g13.12_RTF_TEF001_V8.33_V022",
+                    "vendor": "Askey",
+                    "craatedBy": "Leonardo",
+                    "status": "created",
+                    "createAt": "Wed Jul 16 2025 17:00:00 GMT-0300",
+                    "obs": ""
+                },
+                {
+                    "id": "2",
+                    "radio": "Wi-Fi 5",
+                    "model": "RTF8115VW",
+                    "firmware": "BR_SV_g13.12_RTF_TEF001_V8.33_V022",
+                    "vendor": "Askey",
+                    "craatedBy": "Leonardo",
+                    "status": "created",
+                    "createAt": "Wed Jul 16 2025 17:00:00 GMT-0300",
+                    "obs": ""
+                },
+                {
+                    "id": "3",
+                    "radio": "Wi-Fi 5",
+                    "model": "RTF3507VW-N1",
+                    "firmware": "BR_SV_g13.12_RTF_TEF001_V8.33_V022",
+                    "vendor": "Askey",
+                    "craatedBy": "Leonardo",
+                    "status": "created",
+                    "createAt": "Wed Jul 16 2025 17:00:00 GMT-0300",
+                    "obs": ""
+                },
+                {
+                    "id": "4",
+                    "radio": "Wi-Fi 5",
+                    "model": "RTF3505VW-N1",
+                    "firmware": "BR_SV_g13.12_RTF_TEF001_V8.33_V022",
+                    "vendor": "Askey",
+                    "craatedBy": "Leonardo",
+                    "status": "created",
+                    "createAt": "Wed Jul 16 2025 17:00:00 GMT-0300",
+                    "obs": ""
+                }
+            ]
+        }
+    ]
+}

@@ -10,6 +10,7 @@ import { useAuthentication } from "./hooks/useAuthentication";
 import { onAuthStateChanged } from "firebase/auth";
 
 import { AuthProvider } from "./context/auth-context";
+import { TestesPage } from "./pages/test-page/testes-page";
 
 export const App = () => {
   const [user, setUser] = useState(undefined);
@@ -33,7 +34,14 @@ export const App = () => {
         <div className="flex gap-0.5">
           {user && <Navigation />}
           <Routes>
-            <Route path="/" element={user ? <Home />  : <Navigate to="/login" />} />
+            <Route
+              path="/"
+              element={user ? <Home /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/test"
+              element={user ? <TestesPage /> : <Navigate to="/" />}
+            />
             <Route
               path="/login"
               element={!user ? <Login /> : <Navigate to="/" />}
