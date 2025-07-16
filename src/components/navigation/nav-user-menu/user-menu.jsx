@@ -2,7 +2,6 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Navigate } from 'react-router-dom';
 import { LogOut } from 'lucide-react';
 
 export const BasicMenu = ({ avatar, logout }) => {
@@ -18,12 +17,13 @@ export const BasicMenu = ({ avatar, logout }) => {
   return (
     <div>
       <Button
+        className='hover:bg-transparent'
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        sx={{paddingLeft: 0}}
+        sx={{paddingLeft: 0, background: "none"}}
       >
         {avatar} 
       </Button>
