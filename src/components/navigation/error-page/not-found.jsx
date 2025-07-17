@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import notFound from "../../../assets/lottie/404 error page.json";
+import notFound from "../../../assets/lottie/404-error-page.json";
 
 import { useAuthValue } from "../../../context/auth-context";
 import { Link } from "react-router-dom";
@@ -11,9 +11,6 @@ export const NotFound = () => {
     loop: true,
     autoplay: true,
     animationData: notFound,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
   };
 
   return (
