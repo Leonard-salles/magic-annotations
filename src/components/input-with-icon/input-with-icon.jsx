@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-export const InputWithIcon = ({ icon, value, change, type, placeholder }) => {
+export const InputWithIcon = ({ icon, value, change, type, placeholder, required }) => {
   return (
     <label className={`flex gap-1 items-center w-full ${
         value && twMerge("border-b border-gray-300")
@@ -9,7 +9,7 @@ export const InputWithIcon = ({ icon, value, change, type, placeholder }) => {
       <input
         type={type ? type : "text"}
         value={value}
-        required
+        required={required}
         placeholder={placeholder}
         className={`p-2 w-xs outline-none`}
         onChange={(e) => change(e.target.value)}

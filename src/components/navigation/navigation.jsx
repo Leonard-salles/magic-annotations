@@ -36,20 +36,20 @@ export const Navigation = () => {
             <li>Home</li>
           </NavLink>
           
-          <NavLink to="/dash" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
+          {/* <NavLink to="/dash" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
             <ChartNoAxesCombined />
             <li className="w-full">Dashboard</li>
-          </NavLink>
+          </NavLink> */}
 
           <NavLink to="/test" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
             <ChevronsLeftRightEllipsis />
-            <li>Teste</li>
+            <li>Testes</li>
           </NavLink>
 
-          <NavLink to="/add-car" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
+          {/* <NavLink to="/add-car" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
             <FilePlus />
-            <li className="w-full">Criar caderno</li>
-          </NavLink>
+            <li className="w-full">Cadernos</li>
+          </NavLink> */}
         </ul>
       </nav>
       <div className="p-2.5 border-2 flex items-center gap-1.5 rounded-sm">

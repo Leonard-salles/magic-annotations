@@ -50,6 +50,7 @@ export const Login = () => {
           <InputWithIcon
             icon={<Mail />}
             type="email"
+            required
             value={email}
             placeholder="Use seu e-mail para acessar"
             change={setEmail}
@@ -57,6 +58,7 @@ export const Login = () => {
 
           <InputWithIcon
             type="password"
+            required
             placeholder="Use sua senha de acesso"
             icon={<Lock />}
             value={password}
