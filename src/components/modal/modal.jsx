@@ -29,6 +29,7 @@ export const BasicModal = ({ icon, title, text, func }) => {
           color: "red",
         }}
         onClick={handleOpen}
+        className="bg-red-500"
       >
         {icon}
       </Button>

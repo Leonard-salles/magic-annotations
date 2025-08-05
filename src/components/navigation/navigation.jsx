@@ -19,7 +19,7 @@ export const Navigation = () => {
   const { logout } = useAuthentication();
 
   return (
-    <div className="flex flex-col justify-between h-dvh border-r-2 border-zinc-400 p-4">
+    <div className="flex flex-col justify-between min-h-dvh border-r-2 border-zinc-400 p-4">
       <nav className="min-w-2xs w-[15%] flex  flex-col gap-8">
         <header className="flex gap-1 items-center">
           <BasicMenu
