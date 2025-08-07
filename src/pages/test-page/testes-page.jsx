@@ -27,7 +27,7 @@ export const TestesPage = () => {
     <div className="w-full flex flex-col gap-10">
       <header className="p-4 flex justify-between mt-6">
         <AddNewTest />
-        <div>
+        {/* <div>
           <label
             className={`p-1 flex gap-1 items-center w-[30vw] focus:outline-1 ${
               filter && twMerge("border-b border-gray-300")
@@ -44,7 +44,7 @@ export const TestesPage = () => {
             />
             <Search />
           </label>
-        </div>
+        </div> */}
       </header>
       <main className="p-4 flex flex-col gap-5">
         {allTestes && allTestes.map((test) => <SliderComponent key={test.id} title={test.data.testName} data={test} />)}

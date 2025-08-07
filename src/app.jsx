@@ -12,6 +12,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { AuthProvider } from "./context/auth-context";
 import { TestesPage } from "./pages/test-page/testes-page";
 import { NotFound } from "./components/navigation/error-page/not-found";
+import { Register } from "./pages/register/register";
 
 export const App = () => {
   const [user, setUser] = useState(undefined);
@@ -50,6 +51,10 @@ export const App = () => {
             <Route
               path="/login"
               element={!user ? <Login /> : <Navigate to="/" />}
+            />
+            <Route
+              path="/register"
+              element={!user ? <Register /> : <Navigate to="/" />}
             />
           </Routes>
         </div>

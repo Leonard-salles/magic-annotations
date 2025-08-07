@@ -6,20 +6,21 @@ import { InputWithIcon } from "../../components/input-with-icon/input-with-icon"
 import { InputButton } from "../../components/button/input-button";
 
 //icons
-import { Lock, MoveRight } from "lucide-react";
-import { Mail } from "lucide-react";
+import { Lock, User, Mail, MoveRight } from "lucide-react";
 
 //hoks
 import { useAuthentication } from "../../hooks/useAuthentication";
 
 import Alert from "@mui/material/Alert";
+import { serverTimestamp } from "firebase/firestore";
 
-export const Login = () => {
+export const Register = () => {
   const [email, setEmail] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { login, load, error: authError } = useAuthentication();
+  const { createUser, load, error: authError } = useAuthentication();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,10 +29,12 @@ export const Login = () => {
 
     const user = {
       email,
+      displayName,
       password,
+      createdAt: serverTimestamp()
     };
 
-    const res = await login(user);
+    const res = await createUser(user);
   };
 
   useEffect(() => {
@@ -52,14 +55,22 @@ export const Login = () => {
             type="email"
             required
             value={email}
-            placeholder="Use seu e-mail para acessar"
+            placeholder="Use seu e-mail para criar o acesso"
             change={setEmail}
+          />
+          <InputWithIcon
+            icon={<User />}
+            type="text"
+            required
+            value={displayName}
+            placeholder="Crie seu nome de usuário"
+            change={setDisplayName}
           />
 
           <InputWithIcon
             type="password"
             required
-            placeholder="Use sua senha de acesso"
+            placeholder="Crie sua senha de acesso"
             icon={<Lock />}
             value={password}
             change={setPassword}
@@ -67,10 +78,10 @@ export const Login = () => {
 
           <InputButton value={"Entrar"} loading={load} />
           <Link
-            to="/register"
+            to="/login"
             className="w-full flex items-center justify-end gap-3"
           >
-            Crie uma conta aqui
+            Se já possui uma conta acesse por aqui
             <MoveRight />
           </Link>
           {error && <Alert severity="error">{error}</Alert>}
