@@ -9,7 +9,7 @@ import IconMagic from "/small-icon.svg";
 
 import {stringAvatar} from "./avatar-color/avatar-color-config"
 
-import { ChartNoAxesCombined, ChevronsLeftRightEllipsis, FilePlus, Home } from "lucide-react";
+import { AppWindowMacIcon, ChartNoAxesCombined, ChevronsLeftRightEllipsis, FilePlus, Home } from "lucide-react";
 
 import { NavLink } from "react-router-dom"
 import { twMerge } from "tailwind-merge";
@@ -35,21 +35,16 @@ export const Navigation = () => {
             <Home />
             <li>Home</li>
           </NavLink>
-          
-          {/* <NavLink to="/dash" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
-            <ChartNoAxesCombined />
-            <li className="w-full">Dashboard</li>
-          </NavLink> */}
 
           <NavLink to="/test" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
             <ChevronsLeftRightEllipsis />
-            <li>Testes</li>
+            <li>Meus Testes</li>
+          </NavLink>
+          <NavLink to="/exec-test" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
+            <AppWindowMacIcon />
+            <li>Magic Testes</li>
           </NavLink>
 
-          {/* <NavLink to="/add-car" className={({ isActive }) => `flex items-center rounded-sm gap-2.5 p-2 cursor-pointer w-full hover:outline-1 ${isActive && twMerge("outline-1")}`}>
-            <FilePlus />
-            <li className="w-full">Cadernos</li>
-          </NavLink> */}
         </ul>
       </nav>
       <div className="p-2.5 border-2 flex items-center gap-1.5 rounded-sm">

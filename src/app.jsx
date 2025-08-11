@@ -13,6 +13,7 @@ import { AuthProvider } from "./context/auth-context";
 import { TestesPage } from "./pages/test-page/testes-page";
 import { NotFound } from "./components/navigation/error-page/not-found";
 import { Register } from "./pages/register/register";
+import { ExecuteTest } from "./pages/execute-test/execute-test";
 
 export const App = () => {
   const [user, setUser] = useState(undefined);
@@ -47,6 +48,10 @@ export const App = () => {
             <Route
               path="/test"
               element={user ? <TestesPage /> : <Navigate to="/" />}
+            />
+            <Route
+              path="/exec-test"
+              element={user ? <ExecuteTest /> : <Navigate to="/" />}
             />
             <Route
               path="/login"
